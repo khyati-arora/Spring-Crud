@@ -1,9 +1,13 @@
 package com.example.demo;
+
+
+
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
 
 
 @Getter
@@ -12,16 +16,17 @@ import lombok.Setter;
 @AllArgsConstructor
 @Entity
 @Table(name = "users")
-public class Users {
+public class Users{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(nullable = false)
-    private String firstName;
+    private String username;
     @Column(nullable = false)
-    private String lastName;
-    @Column(nullable = false, unique = true)
-    private String email;
+    private String password;
+    private String role;
+
+    
 }
     

@@ -32,22 +32,12 @@ public class userService {
       return userRep.count();
    }
 
-   public Users updateUserLogic(Users newUser, Long id){
-      Users userDB = getID(id);
-      userDB.setFirstName(newUser.getFirstName());
-      userDB.setLastName(newUser.getLastName());
-      userDB.setEmail(newUser.getEmail());
-      return userRep.save(userDB);
-   }
+   
 
    public void deleteLogic(Long id){
      userRep.deleteById(id);
    }
 
-   public void changeFirstName(Long id,String fName){
-      Users userDB = getID(id);
-      userDB.setFirstName(fName);
-      userRep.save(userDB);
-   }
+   
 
 }
