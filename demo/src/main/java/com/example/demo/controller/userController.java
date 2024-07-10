@@ -69,7 +69,6 @@ public class userController {
     }
 
     
-   
     @DeleteMapping("/{id}")
     public String deleteDB(@PathVariable Long id){
      userSer.deleteLogic(id);
@@ -78,9 +77,8 @@ public class userController {
 
 
 
-    @PostMapping(path="/register/user")
+    @PostMapping(path="/signup")
     public ResponseEntity<Users> createNewUser(@RequestBody Users user, HttpServletResponse response){
-        System.out.println("post request made");
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         Users u=userRepository.save(user);
         response.setHeader("authToken", jwtService.generateToken(user.getUsername()));

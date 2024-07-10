@@ -1,5 +1,5 @@
 # User Management System
-This application is built using Spring Boot and provides a RESTful API for managing user data in a database. It allows to add new users, read user data, update existing users, and delete users.
+This application is built using Spring Boot and provides a RESTful API for managing user data in a database ensuring security through JWT. It allows to signup user, login ,add new users, read user data, update existing users, and delete users.
 
 ## Features
 
@@ -44,4 +44,19 @@ This application is built using Spring Boot and provides a RESTful API for manag
 **Method :** DELETE<br/>
 
 ![add](./screenshots/Delete.png)
+
+## Authentication:
+
+**Endpoint :** '/signup'<br/>
+**Method :** POST<br/>
+
+![add](./screenshots/signup.png)
+
+**Endpoint :** '/login'<br/>
+**Method :** POST<br/>
+
+![add](./screenshots/login.png)
+
+
+
 

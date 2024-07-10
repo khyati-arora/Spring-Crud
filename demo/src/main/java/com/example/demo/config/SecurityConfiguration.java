@@ -38,7 +38,7 @@ public class SecurityConfiguration {
         .csrf(httpSecurityCsrfConfigurer -> httpSecurityCsrfConfigurer.disable())
         .headers(headerConfigurer -> headerConfigurer.frameOptions(frameOptions -> frameOptions.disable())) 
         .authorizeHttpRequests(requests->{
-            requests.requestMatchers("/register/user","/signin","/users").permitAll();
+            requests.requestMatchers("/signup","/users","/authenticate").permitAll();
             requests.anyRequest().authenticated();
         })
      
